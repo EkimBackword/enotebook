@@ -1,27 +1,33 @@
 # Frontend
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
+## Angular CLI
 
-## Development server
+Установка Angular CLI
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+`npm install -g @angular/cli`
 
-## Code scaffolding
+Генерация нового проекта
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+`ng new frontend --routing=true --skipGit=true --style=scss`
 
-## Build
+Переход в папку нового проекта
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+`cd frontend`
 
-## Running unit tests
+Добавление Angular PWA
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+`ng add @angular/pwa`
 
-## Running end-to-end tests
+## Angular PWA
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Так как мы будем создавать PWA приложение, нужно знать что `ng serve` не поддерживает **Service Worker**.
 
-## Further help
+По этой причине, нам следует настроить http-сервер, например можно установить **http-server**:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+`npm install -g http-server`
+
+Давайте теперь проверим работоспособность приложения.
+
+Для начала соберём проект:
+
+`ng build --prod`
